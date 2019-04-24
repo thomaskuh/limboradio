@@ -1,0 +1,28 @@
+<mat-card class="mat-elevation-z10">
+  <mat-card-header *ngIf="state.playing" class="playing">
+    <div mat-card-avatar><mat-icon>thumb_up</mat-icon></div>
+    <mat-card-title>{{'STATE.PLAYING'|translate}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-header *ngIf="!state.playing" class="pausing">
+    <div mat-card-avatar><mat-icon>thumb_down</mat-icon></div>
+    <mat-card-title>{{'STATE.PAUSING'|translate}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>{{'STATE.STATION'|translate}}: <strong>{{state.tagName}}</strong></div>
+    <div>{{'STATE.TRACK'|translate}}: <strong>{{state.tagTitle}}</strong></div>
+    <div class="mt-s">{{'STATE.NET'|translate}}: <strong>{{state.netinfo}}</strong></div>
+    <div class="mt-s">{{'STATE.LIGHT'|translate}}: <strong>{{state.lux|number:'1.2-2'}} LUX</strong></div>
+
+    <div class="mt-m">
+      {{'STATE.VOLUME'|translate}}: <strong>{{state.volume}} %</strong><br>
+      <mat-slider class="fullwidth" min="0" max="100" step="1" [(ngModel)]="state.volume" [thumbLabel]="true" (change)="setVolume($event)"></mat-slider>
+    </div>
+
+    <div>
+      {{'STATE.TIMER'|translate}}: <strong>{{state.timer}} {{'SEC'|translate}}</strong><br/>
+      <div class="p-m">
+        <mat-progress-bar class="mt-m" mode="determinate" [value]="(state.timer / state.timeout) * 100"></mat-progress-bar>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

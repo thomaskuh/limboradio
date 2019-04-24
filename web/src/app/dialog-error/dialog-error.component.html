@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>{{'ERROR.TITLE'|translate}}</h1>
+<div mat-dialog-content>
+  <h3>{{'ERROR.' + data.key | translate}}</h3>
+  <p *ngIf="data.msg">{{data.msg}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="accent" (click)="close()">OK</button>
+</div>

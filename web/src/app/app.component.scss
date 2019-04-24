@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+
+mat-card-header {
+  background-color: mat-color($mat-indigo, 100);
+}
+
+
+.stream-name {
+  width: 100px;
+}
+
+.stream-earl {
+  margin-left: 16px;
+  width: 500px;
+}
+
+
+

@@ -1,0 +1,5 @@
+@import '~@angular/material/theming';
+
+mat-card-header {
+  background-color: mat-color($mat-cyan, 500);
+}

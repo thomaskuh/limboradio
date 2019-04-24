@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+h1 {
+  color: mat-color($mat-pink, A400);
+  /*
+  margin: 0px;
+  text-align: center;
+  */
+  text-transform: uppercase;
+}

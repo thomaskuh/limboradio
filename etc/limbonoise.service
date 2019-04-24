@@ -1,0 +1,11 @@
+[Unit]
+Description=LimboNoise
+After=mpd.service
+
+[Service]
+ExecStart=/usr/bin/aplay -t raw -r 44100 -c 2 -f S16_LE /dev/zero
+# Send SIGTERM to main process
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target

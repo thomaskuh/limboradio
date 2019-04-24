@@ -1,0 +1,61 @@
+{
+  "TITLE": "LimboRadio",
+  "THRESHOLD": "Grenze",
+  "SEC": "sek.",
+  "DONE": "Erledigt",
+
+  "STATE": {
+    "PLAYING": "Läuft",
+    "PAUSING": "Läuft nicht",
+    "STATION": "Sender",
+    "TRACK": "Track",
+    "VOLUME": "Lautstärke",
+    "LIGHT": "Licht",
+    "TIMER": "Bewegungstimer",
+    "NET": "Netzwerk"
+  },
+
+  "CONFIG": {
+    "TITLE": "Konfiguration",
+    "MODE": "Modus",
+    "MODE_PIR": "An bei Bewegung",
+    "MODE_LIGHT": "An bei Licht",
+    "MODE_BOTH": "An bei Bewegung bei Licht",
+    "TIMER": "Bei Bewegung nach {{value}} sek ausschalten:",
+    "LIGHT": "Anschalten, wenn heller als {{value}} Lux:"
+  },
+
+  "STREAM": {
+    "TITLE": "Streams",
+    "NAME": "Name",
+    "EARL": "URL",
+    "NAME_HINT": "Muss ins Display passen, also max. 10 Zeichen.",
+    "EARL_HINT": "Muss mit http(s):// beginnen und eine direkte Stream-URL und keine Playlist(m3u) sein. Keine Sonderzeichen."
+  },
+
+  "WIFI": {
+    "TITLE": "WiFi",
+    "NAME": "SSID",
+    "PASS": "Passwort",
+    "HINT": "Achtung: Hier können die WiFi Zugangsdaten geändert werden. Alles muss EXAKT stimmen (Groß-, Kleinschreibung, etc.), sonst ist das Radio nicht mehr erreichbar. Aktuelle Zugangsdaten werden aus Sicherheitsgründen nicht angezeigt.",
+    "OK": "Speichern und WiFi durchstarten"
+  },
+
+  "ACTIONS": {
+    "OK": "OK",
+    "CANCEL": "Abbrechen",
+    "RESET": "Reset",
+    "ADD": "Neu",
+    "EDIT": "Bearbeiten"
+  },
+
+  "ERROR": {
+    "TITLE": "Fehler",
+    "CONNECTION": "Verbindungsfehler",
+    "WIFI_INVALID": "Validierungsfehler. SSID und Passwort dürfen nicht leer sein und nur die Zeichen a-z, A-Z, 0-9, Leerzeichen, äÄöÖüÜß_-  enthalten.",
+    "STREAMS_SIZE": "1-50 Streams dürfen/müssen es schon sein.",
+    "STREAMS_EMPTY": "Stream Name/URL darf nicht leer sein",
+    "STREAMS_NAME": "Stream Name ungültig. Darf max. 10 Zeichen und keine Sonderzeichen enthalten.",
+    "STREAMS_URL": "Stream URL ungültig. Muss mit http(s):// beginnen und darf keine Sonderzeichen enthalten."
+  }
+}

@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{'STREAM.TITLE'|translate}} - {{(create ? 'ACTIONS.ADD' : 'ACTIONS.EDIT')|translate}}</h1>
+<div mat-dialog-content>
+
+  <mat-form-field class="fullwidth">
+    <input matInput placeholder="{{'STREAM.NAME'|translate}}" [(ngModel)]="item.name" pattern=".{1,10}" required>
+    <mat-hint align="start">{{'STREAM.NAME_HINT'|translate}}</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field class="fullwidth mb-l">
+    <input matInput placeholder="{{'STREAM.EARL'|translate}}" [(ngModel)]="item.earl" pattern="https?://.{1,200}" required>
+    <mat-hint align="start">{{'STREAM.EARL_HINT'|translate}}</mat-hint>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="accent" (click)="ok()">{{'ACTIONS.OK'|translate}}</button>
+  <button mat-flat-button color="primary" (click)="cancel()" *ngIf="create">{{'ACTIONS.CANCEL'|translate}}</button>
+</div>

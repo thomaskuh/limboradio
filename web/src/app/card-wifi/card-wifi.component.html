@@ -1,0 +1,22 @@
+<mat-card class="mat-elevation-z10">
+  <mat-card-header>
+    <div mat-card-avatar><mat-icon>network_wifi</mat-icon></div>
+    <mat-card-title>{{'WIFI.TITLE'|translate}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <h3>{{'WIFI.HINT'|translate}}</h3>
+
+    <mat-form-field class="fullwidth">
+      <input matInput placeholder="{{'WIFI.NAME'|translate}}" [(ngModel)]="item.wifiName" pattern=".{1,50}" required>
+    </mat-form-field>
+
+    <mat-form-field class="fullwidth">
+      <input matInput placeholder="{{'WIFI.PASS'|translate}}" [(ngModel)]="item.wifiPass" pattern=".{1,50}" required>
+    </mat-form-field>
+
+    <div>
+      <button mat-flat-button color="accent" (click)="save()" [disabled]="disabled">{{'WIFI.OK'|translate}}</button>
+    </div>
+
+  </mat-card-content>
+</mat-card>

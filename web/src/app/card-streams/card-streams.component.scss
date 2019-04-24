@@ -1,0 +1,36 @@
+@import '~@angular/material/theming';
+
+mat-card-header {
+  background-color: mat-color($mat-amber, 500);
+}
+
+mat-icon.active {
+  color: mat-color($mat-pink, A200);
+}
+
+h3 {
+  margin: 0px;
+}
+
+.title {
+  cursor: pointer;
+}
+
+.subtitle {
+  font-size: x-small;
+  word-break: break-all;
+}
+
+mat-icon {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+mat-icon.invisible {
+  display: none;
+}
+
+
+button {
+  margin-right: 16px;
+}

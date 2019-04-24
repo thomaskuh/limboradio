@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin: 0px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mt-s {
+  margin-top: 4px;
+}
+
+.mt-m {
+  margin-top: 8px;
+}
+
+.mb-l {
+  margin-bottom: 16px;
+}
+
+.p-m {
+  padding: 8px;
+}
+
+
+.vspacer-s {
+  margin-bottom: 4px;
+}
+
+
+.vspacer {
+  margin-bottom: 30px;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+/* material overwrites */
+mat-card {
+  padding: 0 !important;
+  margin: 20px !important;
+}
+
+mat-card-header {
+  padding: 16px 16px 0px 16px !important;
+}
+
+mat-card-content {
+  padding: 16px !important;
+}
+
+.mat-list-item-content {
+  padding: 0px !important;
+}
+
+/* material icon font */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(/assets/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+  url(/assets/fonts/MaterialIcons-Regular.woff) format('woff'),
+  url(/assets/fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

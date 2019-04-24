@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "http://pi-dev.x.kuhlins.org",
+    "secure": false
+  }
+}

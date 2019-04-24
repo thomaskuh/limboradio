@@ -1,0 +1,15 @@
+# See /boot/overlays/README for all available options
+
+# I2C (lux sensor, display) - Enable i2c and set i2c_vc on to disable VideoCore processor reservation
+dtparam=i2c_arm=on
+dtparam=i2c_vc=on
+
+# I2S (audio amp) - Enable i2s, driver, and mmap for dmixer
+dtparam=i2s=on
+dtparam=i2c=on
+dtoverlay=hifiberry-dac
+dtoverlay=i2s-mmap
+
+gpu_mem=64
+initramfs initramfs-linux.img followkernel
+

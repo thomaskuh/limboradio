@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon>speaker</mat-icon>
+    <span> {{'TITLE'|translate}}</span>
+    <span class="spacer"></span>
+    <span>{{state.time}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<app-card-error [error]="error" *ngIf="error"></app-card-error>
+
+<div *ngIf="!error">
+  <app-card-status [state]="state"></app-card-status>
+
+  <app-card-streams [active]="state.stream"></app-card-streams>
+
+  <app-card-config [state]="state"></app-card-config>
+
+  <app-card-wifi></app-card-wifi>
+</div>

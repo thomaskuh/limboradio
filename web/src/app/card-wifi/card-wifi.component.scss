@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+mat-card-header {
+  background-color: mat-color($mat-blue, 500);
+}
+
+button {
+  margin-right: 16px;
+}

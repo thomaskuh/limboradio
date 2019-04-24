@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+mat-card-header.playing {
+  background-color: mat-color($mat-green, 500);
+}
+
+mat-card-header.pausing {
+  background-color: mat-color($mat-red, 500);
+}
+

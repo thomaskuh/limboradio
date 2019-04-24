@@ -1,0 +1,27 @@
+<mat-card class="mat-elevation-z10">
+  <mat-card-header class="config">
+    <div mat-card-avatar><mat-icon>settings</mat-icon></div>
+    <mat-card-title>{{'CONFIG.TITLE'|translate}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field class="fullwidth">
+      <mat-label>{{'CONFIG.MODE'|translate}}</mat-label>
+      <mat-select [(value)]="state.mode" (selectionChange)="setMode($event)">
+        <mat-option [value]="0">{{'CONFIG.MODE_PIR'|translate}}</mat-option>
+        <mat-option [value]="1">{{'CONFIG.MODE_LIGHT'|translate}}</mat-option>
+        <mat-option [value]="2">{{'CONFIG.MODE_BOTH'|translate}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="mt-m">
+      {{'CONFIG.TIMER'|translate:{'value': state.timeout} }}<br/>
+      <mat-slider class="fullwidth" min="1" max="300" step="1" [(ngModel)]="state.timeout" [thumbLabel]="true" (change)="setTimeout($event)"></mat-slider>
+    </div>
+
+    <div class="mt-m">
+      {{'CONFIG.LIGHT'|translate:{'value': state.threshold} }}<br/>
+      <mat-slider class="fullwidth" min="0" max="100" step="1" [(ngModel)]="state.threshold" [thumbLabel]="true" (change)="setThreshold($event)"></mat-slider>
+    </div>
+
+  </mat-card-content>
+</mat-card>

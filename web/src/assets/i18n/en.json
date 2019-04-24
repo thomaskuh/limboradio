@@ -1,0 +1,61 @@
+{
+  "TITLE": "LimboRadio",
+  "THRESHOLD": "Threshold",
+  "SEC": "sec.",
+  "DONE": "Done",
+
+  "STATE": {
+    "PLAYING": "Playing",
+    "PAUSING": "Not playing",
+    "STATION": "Station",
+    "TRACK": "Track",
+    "VOLUME": "Volume",
+    "LIGHT": "Light",
+    "TIMER": "Move timer",
+    "NET": "Network"
+  },
+
+  "CONFIG": {
+    "TITLE": "Configuration",
+    "MODE": "Mode",
+    "MODE_PIR": "Movement",
+    "MODE_LIGHT": "Light threshold",
+    "MODE_BOTH": "Movement above light threshold",
+    "TIMER": "Off after {{value}} sec non-movement:",
+    "LIGHT": "On if brighter than {{value}} Lux:"
+  },
+
+  "STREAM": {
+    "TITLE": "Streams",
+    "NAME": "Name",
+    "EARL": "URL",
+    "NAME_HINT": "Must fit display, so max. 10 chars.",
+    "EARL_HINT": "Must start with http(s):// and be a direct stream URL and no playlist(m3u). No special characters."
+  },
+
+  "WIFI": {
+    "TITLE": "WiFi",
+    "NAME": "SSID",
+    "PASS": "Password",
+    "HINT": "Attention: WiFi can be changed here. All inputs must be accurate (lower/upper case, ...), otherwise the radio cannot be reachable anymore. Current credentials are hidden for security reason.",
+    "OK": "Save and restart WiFi"
+  },
+
+  "ACTIONS": {
+    "OK": "OK",
+    "CANCEL": "Cancel",
+    "RESET": "Reset",
+    "ADD": "Add",
+    "EDIT": "Edit"
+  },
+
+  "ERROR": {
+    "TITLE": "Error",
+    "CONNECTION": "Connection error",
+    "WIFI_INVALID": "Validation error. SSID/Password invalid or empty. Allowed chars: a-z, A-Z, 0-9, Leerzeichen, äÄöÖüÜß_-.",
+    "STREAMS_SIZE": "At least 1 and max 50 streams must be defined.",
+    "STREAMS_EMPTY": "Stream name/URL cannot be empty",
+    "STREAMS_NAME": "Stream name invalid. Max 10 and no special characters.",
+    "STREAMS_URL": "Stream URL invalid. Must start with http(s):// and no special characters allowed."
+  }
+}
