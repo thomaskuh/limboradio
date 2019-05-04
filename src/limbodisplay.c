@@ -55,12 +55,12 @@ void limbodisplay_refresh(struct limbo_context *ctx) {
 
     // Others SMALL
     ssd1306_setTextSize(1);
-    sprintf(buf, "\nNet %s", ctx->netinfo);
+    sprintf(buf, "\nIP: %s", ctx->netinfo);
     ssd1306_drawString(buf);
-    sprintf(buf, "\nLux %07.2f - Cdn %03ld", ctx->lux, ctx->timer);
+    sprintf(buf, "\n%03ld %.2f", ctx->timer, ctx->lux);
     ssd1306_drawString(buf);
 
-    sprintf(buf, "%d", ctx->volume);
+    sprintf(buf, "\n%d", ctx->volume);
     ssd1306_drawString(buf);
 
     ssd1306_fillRect(24, 56, ctx->volume, 7 , WHITE);

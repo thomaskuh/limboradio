@@ -9,6 +9,7 @@ struct knob {
   volatile int last_encoded;
 	void (*callback_rotary)(int valueChange);
   void (*callback_button)();
+  unsigned long long button_ts;
 };
 
 void knob_init(int pin_a, int pin_b, int pin_btn, void (*callback_rotary)(int), void (*callback_button)());
