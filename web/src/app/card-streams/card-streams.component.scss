@@ -17,8 +17,14 @@ h3 {
 }
 
 .subtitle {
-  font-size: x-small;
+  font-size: small;
   word-break: break-all;
+}
+
+@media only screen and (max-width: 800px) {
+  .subtitle {
+    display: none;
+  }
 }
 
 mat-icon {

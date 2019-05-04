@@ -20,7 +20,7 @@
     "MODE": "Modus",
     "MODE_PIR": "An bei Bewegung",
     "MODE_LIGHT": "An bei Licht",
-    "MODE_BOTH": "An bei Bewegung bei Licht",
+    "MODE_BOTH": "An bei Bewegung und Licht",
     "TIMER": "Bei Bewegung nach {{value}} sek ausschalten:",
     "LIGHT": "Anschalten, wenn heller als {{value}} Lux:"
   },
