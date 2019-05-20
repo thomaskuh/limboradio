@@ -1,17 +1,62 @@
 # LimboRadio
 
-DIY webradio turning on and off depending on light and movement conditions. Custom made case, software with WebUI and PCB. Build around a RaspberryPi Zero W.
+DIY WEB RADIO playing music whenever you walk by or turn on the lights. Custom case, software, webinterface and PCB. Based on a RaspberryPi Zero W. I made it because there's simply no such thing to buy out there in the whole wide world ... and because I can ;)
 
-This readme describes the complete setup from zero to hero. It's based on arch linux, because it's my favorite distribution but can be easily customized.
+Here's the complete guide from zero to hero. Take it as an inspiration, customize it your way or clone it 1:1. I decided to build 5 units: One for the kitchen, one for the bathroom and some for friends ... and because parts like case and PCB are way cheaper in bunches.
 
-## Why?
-- Simply because there's no such thing to buy out there in the whole f***in world.
-- Because I can.
+![LimboRadio Army](doc/radio_army_m.jpg)
 
 ## Hardware
-TODO: Documentation
+
+My build is based on a custom PCB placed in a selfmade wooden case. The base idea behind it is to have a PCB mounted on the backside of the front panel. All components are soldered so i don't need to mount and wire every single sensor manually somewhere in the case. I'm way to lazy to describe how i made the case since it's basically a simple cube with some holes in it. All the electronic parts are listed below and the images should be enough to get how things come together. Feel free to wire things yourself instead of using the PCB or place things in another (old) case instead.
+
+#### PCB
+
+Here's the PCB without components and how it looks like with all components soldered.
+
+<a href="doc/pcb_blank_front.jpg"><img src="doc/pcb_blank_front_thumb.jpg" title="PCB plain front" height="100" /></a>
+<a href="doc/pcb_blank_back.jpg"><img src="doc/pcb_blank_back_thumb.jpg" title="PCB plain back" height="100" /></a>
+<a href="doc/pcb_soldered_front.jpg"><img src="doc/pcb_soldered_front_thumb.jpg" title="PCB with components front" height="100" /></a>
+<a href="doc/pcb_soldered_back.jpg"><img src="doc/pcb_soldered_back_thumb.jpg" title="PCB with components back" height="100" /></a>
+
+#### Case
+
+The case is basically a wooden cube with some holes for the speaker, power connector, sensors, display and rotary button.
+The most interesting part is the front panel which is mounted with some small neodym magnets for easy hardware access without any screws. On it's backside you see some additional cut-outs and another wooden panel so the PCB fits perfectly.
+
+
+<a href="doc/panel_front.jpg"><img src="doc/panel_front_thumb.jpg" title="Panel frontside" height="100" /></a>
+<a href="doc/panel_back.jpg"><img src="doc/panel_back_thumb.jpg" title="Panel backside" height="100" /></a>
+<a href="doc/panel_mount.jpg"><img src="doc/panel_mount_thumb.jpg" title="Panel with PCB mounted" height="100" /></a>
+<a href="doc/case_back.jpg"><img src="doc/case_back_thumb.jpg" title="Case backside" height="100" /></a>
+<a href="doc/case_open_1.jpg"><img src="doc/case_open_1_thumb.jpg" title="Case open 1" height="100" /></a>
+<a href="doc/case_open_2.jpg"><img src="doc/case_open_2_thumb.jpg" title="Case open 2" height="100" /></a>
+<a href="doc/case_open_3.jpg"><img src="doc/case_open_3_thumb.jpg" title="Case open 3" height="100" /></a>
+<a href="doc/case_front_1.jpg"><img src="doc/case_front_1_thumb.jpg" title="Case front 1" height="100" /></a>
+<a href="doc/case_front_2.jpg"><img src="doc/case_front_2_thumb.jpg" title="Case front 2" height="100" /></a>
+
+
+#### Parts
+| What                         | Specific part/model           | Price | Link |
+| ---------------------------- | ----------------------------- | -----:| ---- |
+| PCB                          | Gerber files in "pcb" folder  |    5€ | [AllPCB](https://www.allpcb.com) |
+| Controller                   | Raspberry Pi Zero W           |   12€ | [RaspberryPi.org](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
+| I2S Amplifier                | Adafruit 3W Class D MAX98357A |    7€ | [Adafruit](https://www.adafruit.com/product/3006)
+| Sensor Light                 | GY-49 MAX44009                | 1.50€ | [AliExpress](https://aliexpress.com/wholesale?SearchText=gy-49+max44009)
+| Sensor Movement              | SR602 Mini PIR                |    2€ | [AliExpress](https://aliexpress.com/wholesale?SearchText=SR602)
+| Display                      | 0.96'' OLED I2C               |    2€ | [AliExpress](https://aliexpress.com/wholesale?SearchText=oled+i2c+128x64)
+| Knob (Volume/Channel Switch) | EC11 Rotary Button Encoder    | 0.50€ | [AliExpress](https://aliexpress.com/wholesale?SearchText=ec11)
+| Power Connector              | DC099 DC Socket (5,5x2,1mm)   | 0.50€ | [AliExpress](https://aliexpress.com/wholesale?SearchText=dc099)
+| Capacitor                    | 25V 1000uf                    | 0.20€ | [AliExpress](https://aliexpress.com/wholesale?SearchText=capacitor+25v+1000uf)
+| Speaker                      | Choose whatever you like      |    5€ | [AliExpress](https://aliexpress.com/wholesale?SearchText=audio+speaker+full+range+3w)
+| Case                         | Build yourself!               |   10€ | [ExpressZuschnitt](https://expresszuschnitt.de/)
+| The usual stuff              | Cables, solder, screws, ...   |    5€ | --- |
+|                              |                               |  **~50€** | **SUM** |
+
 
 ## Software
+
+The core software is written in C with an Angular Webinterface. The setup guide is based on my favorite distro: ArchLinux.
 
 Setup a SD card using the [official arch guide](https://archlinuxarm.org/platforms/armv6/raspberry-pi#installation) for RaspberryPi Zero W. But it in your Pi and follow the guide:
 
